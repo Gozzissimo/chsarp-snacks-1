@@ -137,3 +137,25 @@ vs3.Aggregate("", (string old, string current) =>
     return "";
 });
 //Stampa "uno" "due" "tre". L'ordine della aggregate è dal primo all'ultimo.
+
+//Ancora
+//Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
+//Continua a chiedere i numeri all’utente e a inserirli nell’array,
+//fino a quando la somma degli elementi è minore di 50.
+//!!Sostituiamo la richiesta all'utente con numeri casuali
+//noi non abbiamo gli array dinamici, quindi lo iniziamo come lista
+List<int> listOfInt = new List<int>();
+int somma = 0;
+Random rng = new Random();
+while (true)
+{
+    int n1 = rng.Next(0, 10);
+    if ((somma + n1) > 50)
+        break;
+    somma += n1;
+    listOfInt.Add(n1);
+}
+var vret = listOfInt.ToArray();
+foreach (int i in vret)
+    Console.Write("{0} ", i);
+Console.WriteLine();
