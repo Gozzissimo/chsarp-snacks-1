@@ -159,3 +159,26 @@ var vret = listOfInt.ToArray();
 foreach (int i in vret)
     Console.Write("{0} ", i);
 Console.WriteLine();
+
+//Dato un vettori di interi, costruito con numeri casuali, calcolare la media dei valori
+//il vettore deve contenere 10000 elementi
+
+Random rnd = new Random();
+int[] arrTest = new int[10000];
+int iSommaValori = 0;
+
+for (int i = 0; i < arrTest.Length; i++)
+{
+    arrTest[i] = rnd.Next(0,100);
+    iSommaValori = iSommaValori + arrTest[i];
+    Console.Write("{0} ", arrTest[i]);
+}
+
+double dMediaValori = iSommaValori / arrTest.Length;
+Console.WriteLine();
+Console.WriteLine(dMediaValori);
+
+
+
+
+
